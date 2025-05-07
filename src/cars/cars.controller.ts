@@ -32,7 +32,7 @@ export class CarsController {
         @Body() updateCarDto: UpdateCarDto )
         {
             
-        return updateCarDto;
+        return this.carsService.update( id, updateCarDto);
     }
     @Delete(':id')
     deleteCar(@Param('id', ParseIntPipe) id: number){
