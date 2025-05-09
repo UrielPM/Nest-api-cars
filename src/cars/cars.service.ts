@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { Car } from './interfaces/car.interface';
-import { v4 as uuid} from 'uuid'
+import { v4 as uuid} from 'uuid';
 import { CreateCarDto, UpdateCarDto } from './dto';
 
 
@@ -65,5 +65,9 @@ export class CarsService {
 
         const car = this.findOneById( id);
         this.cars = this.cars.filter(car => car.id !== id);
+    }
+
+    fillCarsWithSeedData( cars: Car[]){
+        this.cars = cars;
     }
 }

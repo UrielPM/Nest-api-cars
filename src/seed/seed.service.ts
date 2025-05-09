@@ -6,6 +6,8 @@ export class SeedService {
   
 
   populateDB(){
-    return 'Seed'
+
+
+    return 'Seed executed ';
   }
 }
